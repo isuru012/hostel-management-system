@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.LoginFormController">
+   <children>
+       <Label layoutX="878.0" layoutY="177.0" prefHeight="85.0" prefWidth="241.0" text="Login Form">
+           <font>
+               <Font name="Arial Bold" size="40.0" />
+           </font>
+       </Label>
+
+       <Label layoutX="634.0" layoutY="361.0" prefHeight="35.0" prefWidth="128.0" text="Username">
+           <font>
+               <Font name="Arial Bold" size="18.0" />
+           </font>
+       </Label>
+       <JFXTextField fx:id="txtName" focusColor="#448dc2" layoutX="840.0" layoutY="359.0" prefHeight="38.0" prefWidth="430.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+           <effect>
+               <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+           </effect>
+           <font>
+               <Font name="Arial Bold" size="15.0" />
+           </font>
+       </JFXTextField>
+
+       <Label layoutX="634.0" layoutY="505.0" prefHeight="34.0" prefWidth="147.0" text="Password">
+           <font>
+               <Font name="Arial Bold" size="18.0" />
+           </font>
+       </Label>
+       <JFXPasswordField fx:id="txtPassword" layoutX="840.0" layoutY="503.0" onKeyReleased="#txtPassOnKeyReleased" prefHeight="37.0" prefWidth="438.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" />
+
+       <JFXCheckBox fx:id="checkBoxPassword" layoutX="1076.0" layoutY="578.0" onMouseClicked="#checkBoxShowPassword" prefHeight="42.0" prefWidth="203.0" text="Show Password">
+           <font>
+               <Font name="Arial Bold" size="20.0" />
+           </font>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </JFXCheckBox>
+       <Label fx:id="lblError" layoutX="667.0" layoutY="688.0" prefHeight="22.0" prefWidth="664.0" textFill="RED" />
+       <Button fx:id="btnLogin" layoutX="948.0" layoutY="720.0" onAction="#loginButtonAction" prefHeight="55.0" prefWidth="128.0" style="-fx-background-color: #5ab957;" text="Login">
+           <font>
+               <Font name="Arial Bold" size="21.0" />
+           </font>
+           <effect>
+               <DropShadow color="#00000050" />
+           </effect>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </Button>
+      <JFXTextField fx:id="txtShowPassword" focusColor="#448dc2" layoutX="840.0" layoutY="503.0" prefHeight="38.0" prefWidth="438.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css" visible="false">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+   </children>
+   <stylesheets>
+      <URL value="@../assests/css/application.css" />
+      <URL value="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/css/style.css" />
+   </stylesheets>
+</AnchorPane>
