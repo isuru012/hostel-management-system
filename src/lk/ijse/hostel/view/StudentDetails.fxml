@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.StudentDetailsController">
+<children>
+
+    <TableView id="my-table" fx:id="tblReservation" layoutX="198.0" layoutY="584.0" onMouseClicked="#onMouseClicked" prefHeight="447.0" prefWidth="1546.0" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+        <columns>
+            <TableColumn fx:id="colRes_Id" prefWidth="156.66665649414062" text="Res_Id" />
+            <TableColumn fx:id="colStudent_Name" prefWidth="340.66668701171875" text="Student_Name" />
+            <TableColumn fx:id="colDate" prefWidth="236.66668701171875" text="Date" />
+            <TableColumn fx:id="colStudent_Id" prefWidth="317.33331298828125" text="Student_Id" />
+            <TableColumn fx:id="colRoomTypeId" prefWidth="242.333251953125" text="Room_Type_Id" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="255.6666259765625" text="KEY MONEY" />
+        </columns>
+    </TableView>
+    <JFXTextField fx:id="txtSearch" focusColor="#448dc2" focusTraversable="false" layoutX="204.0" layoutY="510.0" onKeyReleased="#searchOnAction" prefHeight="52.0" prefWidth="1336.0" promptText="Search Students Here" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+        <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+        </effect>
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </JFXTextField>
+    <Label layoutX="816.0" layoutY="49.0" prefHeight="73.0" prefWidth="308.0" text="Reservation" textFill="#044721">
+        <font>
+            <Font name="Segoe UI Black" size="50.0" />
+        </font>
+    </Label>
+      <JFXComboBox fx:id="checkboxStudentid" layoutX="332.0" layoutY="274.0" onAction="#checkboxStudentidOnAction" prefHeight="59.0" prefWidth="264.0" promptText="Student Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="checkboxRoomTypeId" layoutX="752.0" layoutY="272.0" prefHeight="59.0" prefWidth="264.0" promptText="Room Type Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1570.0" layoutY="440.0" onAction="#addOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #039944; -fx-background-radius: 20px;" text="Create" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/plus2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1396.0" layoutY="442.0" onAction="#updateOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #0056A3; -fx-background-radius: 20px;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1575.0" layoutY="520.0" onAction="#deleteOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #ED5E68; -fx-background-radius: 20px;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/remove.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXRadioButton fx:id="unpaidradio" layoutX="1259.0" layoutY="307.0" prefHeight="19.0" prefWidth="93.0" selected="true" text="UNPAID">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="keymoney" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="paidradio" layoutX="1160.0" layoutY="307.0" prefHeight="19.0" prefWidth="93.0" text="PAID" toggleGroup="$keymoney">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <Label layoutX="1160.0" layoutY="272.0" text="Key Money">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="433.0" text="Student Name :">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentName" layoutX="478.0" layoutY="434.0" prefHeight="21.0" prefWidth="373.0" textFill="#dfff00">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="94.0" fitWidth="94.0" layoutX="17.0" layoutY="17.0" onMouseClicked="#onMouseClickHouse" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logos/home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+</children>
+
+   <stylesheets>
+      <URL value="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/css/style.css" />
+      <URL value="@../assests/css/application.css" />
+   </stylesheets>
+</AnchorPane>

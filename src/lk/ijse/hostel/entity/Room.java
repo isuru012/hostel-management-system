@@ -1,9 +1,6 @@
 package lk.ijse.hostel.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -15,7 +12,7 @@ public class Room {
     double key_money;
     int room_quantity;
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room",cascade={CascadeType.PERSIST, CascadeType.MERGE},fetch = FetchType.LAZY)
     private List<Reservation> reservations;
 
     public Room() {

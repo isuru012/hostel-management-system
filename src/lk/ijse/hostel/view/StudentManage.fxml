@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.StudentManageController">
+   <children>
+      <TableView id="my-table" fx:id="tblStudent" layoutX="336.0" layoutY="562.0" onMouseClicked="#onMouseClicked" prefHeight="469.0" prefWidth="1356.0" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <columns>
+            <TableColumn fx:id="colNIC" prefWidth="156.66665649414062" text="StudentID" />
+            <TableColumn fx:id="colName" prefWidth="256.0" text="NAME" />
+            <TableColumn fx:id="colAddress" prefWidth="226.0" text="ADDRESS" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="307.0" text="PHONE NUMBER" />
+            <TableColumn fx:id="colDOBDate" prefWidth="225.0" text="DOBDATE" />
+            <TableColumn fx:id="colGender" prefWidth="184.0" text="GENDER" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtNic" focusColor="#448dc2" focusTraversable="false" layoutX="409.0" layoutY="214.0" prefHeight="38.0" prefWidth="430.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="409.0" layoutY="187.0" text="StudentID">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="#448dc2" focusTraversable="false" layoutX="1080.0" layoutY="204.0" prefHeight="38.0" prefWidth="456.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="1078.0" layoutY="178.0" text="NAME">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1515.0" layoutY="422.0" onAction="#addOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #039944; -fx-background-radius: 20px;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/plus2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1341.0" layoutY="424.0" onAction="#updateOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #0056A3; -fx-background-radius: 20px;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="1520.0" layoutY="502.0" onAction="#deleteOnAction" prefHeight="38.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-color: #ED5E68; -fx-background-radius: 20px;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/logos/remove.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" focusColor="#448dc2" focusTraversable="false" layoutX="405.0" layoutY="493.0" onKeyReleased="#searchOnAction" prefHeight="38.0" prefWidth="1088.0" promptText="Search Student here" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="711.0" layoutY="65.0" prefHeight="52.0" prefWidth="558.0" text="Student Management" textFill="#044721">
+         <font>
+            <Font name="Segoe UI Black" size="50.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" focusColor="#448dc2" focusTraversable="false" layoutX="405.0" layoutY="315.0" prefHeight="38.0" prefWidth="430.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPhoneNumber" focusColor="#448dc2" focusTraversable="false" layoutX="1080.0" layoutY="309.0" prefHeight="38.0" prefWidth="456.0" style="-fx-background-color: #fcfcfc; -fx-padding: 10px;" stylesheets="@../../../../../../Layered Architecture Final Project/Working/BookShop/src/lk/ijse/bookshop/assests/css/style.css">
+         <effect>
+            <DropShadow color="#0000002d" height="15.07" radius="8.5175" />
+         </effect>
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="1080.0" layoutY="282.0" text="PHONE NUMBER">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="291.0" text="ADDRESS">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="datepicker" defaultColor="BLACK" layoutX="553.0" layoutY="427.0" prefHeight="39.0" prefWidth="235.0" />
+      <JFXRadioButton fx:id="maleRadioButton" layoutX="990.0" layoutY="436.0" selected="true" text="Male">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="femaleRadioButton" layoutX="1090.0" layoutY="436.0" text="Female" toggleGroup="$gender">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </JFXRadioButton>
+      <Label layoutX="1001.0" layoutY="392.0" text="Gender">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="412.0" text="DOBDate">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="94.0" fitWidth="94.0" layoutX="38.0" layoutY="27.0" onMouseClicked="#onmouseclickedhome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logos/home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../assests/css/application.css" />
+      <URL value="@../../../../../../BookShop/src/lk/ijse/bookshop/assests/css/style.css" />
+   </stylesheets>
+</AnchorPane>
