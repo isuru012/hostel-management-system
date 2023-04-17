@@ -17,6 +17,7 @@ public class Reservation {
     @JoinColumn(name = "nic" )
     private Student student;
 
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "room_type_id")
     private Room room;
