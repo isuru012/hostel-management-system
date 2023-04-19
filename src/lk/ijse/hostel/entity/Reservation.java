@@ -13,12 +13,12 @@ public class Reservation {
     private String student_name;
     private String key_money_status;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "nic" )
     private Student student;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "room_type_id")
     private Room room;
 

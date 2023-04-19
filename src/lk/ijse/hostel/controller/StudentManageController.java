@@ -23,11 +23,14 @@ import lk.ijse.hostel.service.custom.RoomService;
 import lk.ijse.hostel.service.custom.StudentService;
 import lk.ijse.hostel.view.tm.StudentManageTM;
 
+import javax.persistence.PersistenceException;
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -345,7 +348,13 @@ private StudentManageTM selectedStudent;
                             selectedStudent.getDob(),
                             selectedStudent.getGender()
                     );
-                    boolean isDeleted = studentBO.deleteStudent(studentDTO);
+                    boolean isDeleted = false;
+                    try {
+
+                         isDeleted= studentBO.deleteStudent(studentDTO);
+                    }catch (Exception s){
+                        new Alert(Alert.AlertType.ERROR, "This Student Has a reservation First delete it").showAndWait();
+                    }
                     if (isDeleted) {
                         new Alert(Alert.AlertType.INFORMATION, "Student deleted successfully").showAndWait();
                         loadAllStudents();

@@ -12,7 +12,7 @@ public class Room {
     double key_money;
     int room_quantity;
 
-    @OneToMany(mappedBy = "room",cascade={CascadeType.PERSIST, CascadeType.MERGE},fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "room",cascade=CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Reservation> reservations;
 
     public Room() {

@@ -17,7 +17,7 @@ public class Student{
     private LocalDate dob;
     private String gender;
 
-    @OneToMany(mappedBy = "student",cascade={CascadeType.PERSIST, CascadeType.MERGE},fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "student",cascade=CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Reservation> reservations;
 
     public Student() {
