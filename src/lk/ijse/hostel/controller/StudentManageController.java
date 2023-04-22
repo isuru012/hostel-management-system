@@ -390,4 +390,8 @@ private StudentManageTM selectedStudent;
 
         }
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }

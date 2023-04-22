@@ -59,9 +59,17 @@
             <Font name="Arial Bold" size="26.0" />
          </font>
       </Label>
-      <ImageView fitHeight="89.0" fitWidth="93.0" layoutX="1790.0" layoutY="22.0" onMouseClicked="#onmouseclickeduser" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onmouseclickeduser" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assests/logos/adminlogo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="1883.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logos/close.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />

@@ -182,4 +182,8 @@ txtPassword.setText(txtShowPassword.getText());
         }
 
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }

@@ -149,4 +149,8 @@ public class LoginDetailsEditController {
             }
         }
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }

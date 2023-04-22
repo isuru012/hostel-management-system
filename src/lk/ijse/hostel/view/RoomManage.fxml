@@ -130,6 +130,14 @@
             <Image url="@../assests/logos/home.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="1885.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logos/close.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@../assests/css/application.css" />

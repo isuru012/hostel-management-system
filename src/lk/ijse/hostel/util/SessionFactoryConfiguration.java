@@ -15,6 +15,7 @@ import org.hibernate.service.ServiceRegistry;
 public class SessionFactoryConfiguration {
 
     private static SessionFactoryConfiguration factoryConfiguration;
+
     private SessionFactory sessionFactory;
 
     private SessionFactoryConfiguration(){

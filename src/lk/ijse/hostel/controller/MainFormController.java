@@ -120,4 +120,8 @@ public class MainFormController {
         alert.setHeaderText(null);
         alert.showAndWait();
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }

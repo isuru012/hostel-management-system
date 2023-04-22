@@ -362,4 +362,12 @@ if (updateReservation) {
         }
 
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void refreshTable(MouseEvent mouseEvent) {
+        loadAllReservations();
+    }
 }

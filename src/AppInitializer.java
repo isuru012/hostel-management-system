@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lk.ijse.hostel.util.SessionFactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -25,6 +26,7 @@ public class AppInitializer extends Application {
 
         Parent root = FXMLLoader.load(this.getClass().getResource("lk/ijse/hostel/view/LoginForm.fxml"));
         Scene mainScene = new Scene(root);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Java FX POS");
         primaryStage.centerOnScreen();

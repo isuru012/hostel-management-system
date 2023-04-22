@@ -283,4 +283,8 @@ private RoomManageTM selectedRoom;
 
         }
     }
+
+    public void onClose(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
 }
